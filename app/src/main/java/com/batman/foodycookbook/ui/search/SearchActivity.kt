@@ -46,7 +46,7 @@ class SearchActivity : BaseActivity(), ISearchView {
         setSupportActionBar(toolbarItem)
         supportActionBar!!.setDisplayShowHomeEnabled(true)
 
-        manager = GridLayoutManager(this,2)
+        manager = GridLayoutManager(this,1)
         var searchValue = intent.getStringExtra(value).toString()
 
         showMessage(searchValue!!)
