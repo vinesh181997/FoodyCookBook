@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/root_layout"
+    android:background="@color/whiteColor"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/appBarOrder"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarItem"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimaryDark"
+            app:popupTheme="@style/AppTheme.AppBarOverlay">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="FOODY COOK BOOK"
+                android:textSize="20dp"
+                android:textColor="@color/whiteColor"
+                android:textAppearance="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"
+                />
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appBarOrder">
+
+
+        <EditText
+            android:id="@+id/searchview"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="23dp"
+            android:layout_marginRight="23dp"
+            android:layout_toStartOf="@+id/button"
+            android:layout_toLeftOf="@+id/button"
+            android:ems="10"
+            android:hint="Search"
+            android:inputType="textPersonName" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/productRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/searchview"
+            android:scrollbars="vertical" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/searchview"
+
+            />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="78dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Go" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
